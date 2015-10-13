@@ -3,10 +3,18 @@ html(lang="en")
   block vars
   head
     title Test
-    script(src="runtime.js" type="text/javascript")
+    script(src="jade/runtime.js" type="text/javascript")
     script(src='over18.js' type="text/javascript")
     script(src='ageCheck.js' type="text/javascript")
-    script(src='bundle.js')
+    script(src='bundle.js' type="text/javascript")
+    script(src='page/page.js' type="text/javascript")
+    
   body
+     ul
+       li
+         a(href="./agecheck") ageCheck
+       li
+         a(href="./over") over
     .page
         block body
+    script(src='therouter.js' type="text/javascript")
