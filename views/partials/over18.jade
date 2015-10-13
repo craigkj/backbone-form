@@ -1,0 +1,14 @@
+form
+    h2.form__title Welcome Back
+    div
+        label(for="username").form__label Email or username
+        input(type="text" name="username" placeholder="Email or username" value="example@bbc.co.uk").form__field.form__field--success
+        span !=username.error
+    div
+        label(for="password").form__label Password
+        input(type="password" name="password" placeholder="Password" value="Password").form__field.form__field--success
+        a(href="").form__link.form__link--forgot Forgot your password?
+    div
+        input(type="submit" value="Sign In").form__action
+        p.form__text Dont have a BBC account yet? 
+            a(href="#").form__link Sign up

@@ -1,0 +1,17 @@
+form.ageCheck
+    h2.form__title First things first, how old are you?
+    
+    input(type="radio" name="radio" id="over18" checked).form__radio
+    label(for="over18").form__label.form__label--radio Over 18
+    input(type="radio" name="radio" id="under18").form__radio
+    label(for="under18").form__label.form__label--radio Under 18
+    
+    input(type="submit" value="Continue").submit
+    
+
+
+script(type="text/javascript").
+    document.querySelectorAll('.submit')[0].addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelectorAll('.page')[0].innerHTML = window.over18Template();
+    });
